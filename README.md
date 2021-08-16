@@ -13,5 +13,6 @@ pip install library-name
 
 What I've learned so far:  
 Connecting to API via pypokedex library  
+Building a python UI using tkinter  
 Attaching additional data to API results via PDF with German names  
 Adding multilanguage support to a program
