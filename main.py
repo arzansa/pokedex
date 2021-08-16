@@ -62,16 +62,16 @@ def load_pokemon():
     isgerman = False
     a = 0
 
-    # lookup in German (this is broken right now)
-    for x in german:
-        if (text_box.get(1.0, "end-1c").lower().title() == x):
-            pokemon = pypokedex.get(name=str(a))
-            isgerman = True
-        a = a + 1
+# lookup in German (this is broken right now)
+#    for x in german:
+#        if (text_box.get(1.0, "end-1c").lower().title() == x):
+#            pokemon = pypokedex.get(name=str(a))
+#            isgerman = True
+#        a = a + 1
 
     # looks up Pokémon in dex
-    if (isgerman is False):
-        pokemon = pypokedex.get(name=text_box.get(1.0, "end-1c"))
+#    if (isgerman is False):
+    pokemon = pypokedex.get(name=text_box.get(1.0, "end-1c"))
 
     # pulls image from URL
     http = urllib3.PoolManager()
