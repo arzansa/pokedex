@@ -1,5 +1,5 @@
 # A Pokédex with Multilanguage Support
-This is a Pokédex that is currently configured for learning the German names of Pokémon I made for a friend.
+This is a Pokédex I made for a friend that is currently configured for learning the German names of Pokémon.
 
 Python 3 is required to run. Also, the below libraries must be installed:  
 pandas  
