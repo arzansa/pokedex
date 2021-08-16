@@ -1,4 +1,3 @@
-from tkinter.constants import LEFT
 import pandas as pd
 import pypokedex
 import PIL.Image, PIL.ImageTk
@@ -62,11 +61,14 @@ def load_pokemon():
     instructions.destroy()
     isgerman = False
     a = 0
+
+    # lookup in German (this is broken right now)
     for x in german:
-        if (text_box.get(1.0, "end-1c").lower().title() == german[a]):
+        if (text_box.get(1.0, "end-1c").lower().title() == x):
             pokemon = pypokedex.get(name=str(a))
             isgerman = True
         a = a + 1
+
     # looks up Pokémon in dex
     if (isgerman is False):
         pokemon = pypokedex.get(name=text_box.get(1.0, "end-1c"))
@@ -83,7 +85,7 @@ def load_pokemon():
 
     # displays pokemon info (German text is from array built from spreadsheet)
     pokeinfo.config(text=f"{pokemon.dex} - {pokemon.name}".title())
-    lang1name.config(text=f"{german[pokemon.dex]}".title())
+    lang1name.config(text=f"{german[pokemon.dex-1]}".title())
     poketypes.config(text=" - ".join([t for t in pokemon.types]).title())
 
     # clears text box
