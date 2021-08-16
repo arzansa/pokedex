@@ -5,7 +5,6 @@ Python 3 is required to run. Also, the below libraries must be installed:
 pandas  
 pypokedex  
 pillow  
-tkinter  
 urllib3  
 
 to install the above libraries, open command line and type the following for each:  
